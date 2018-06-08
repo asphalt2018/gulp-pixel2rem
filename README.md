@@ -2,6 +2,11 @@
 gulp plugin to enable usage of rem instead of pixel
 
 # usage
+first install package
+``javascript
+npm install --save-dev gulp-pixel2rem
+```
+
 ```javascript
 const gulp = require('gulp');
 const px2rem = require('gulp-pixel2rem');
