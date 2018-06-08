@@ -8,6 +8,8 @@ first install package
 npm install --save-dev gulp-pixel2rem
 ```
 
+then write in your gulpfile.js
+
 ```javascript
 const gulp = require('gulp');
 const px2rem = require('gulp-pixel2rem');
