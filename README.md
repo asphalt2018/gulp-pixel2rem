@@ -19,3 +19,27 @@ gulp.task('default', function () {
     .pipe(gulp.dest('dist'))
 });
 ```
+
+finally it will auto genreate the following code in your html file
+```javascript
+<script>
+    var customWidth = innerWidth;
+    if (innerWidth > 480) {
+      customWidth = 480
+    }
+    document.documentElement.style.fontSize = 100 * customWidth / 750 + 'px';
+    addEventListener('load', function () {
+      setTimeout(function () {
+        document.documentElement.style.fontSize = 100 * customWidth / 750 + 'px';
+        window.unit = 100 * customWidth / 750;
+        var e = document.createEvent('Event');
+        e.initEvent('adjustReady', true, true);
+        window.dispatchEvent(e);
+      }, 480);
+    });
+    addEventListener('orientationchange', function () {
+      setTimeout(function () {
+        document.documentElement.style.fontSize = 100 * customWidth / 750 + 'px';
+      }, 480)
+    });</script>
+    ```
