@@ -41,5 +41,6 @@ finally it will auto genreate the following code in your html file
       setTimeout(function () {
         document.documentElement.style.fontSize = 100 * customWidth / 750 + 'px';
       }, 480)
-    });</script>
+    });
+</script>
 ```
