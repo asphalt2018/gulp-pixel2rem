@@ -20,7 +20,7 @@ gulp.task('default', function () {
 });
 ```
 
-finally it will auto genreate the following code in your html file
+finally it will auto generate the following code in your html file
 ```javascript
 <script>
     var customWidth = innerWidth;
