@@ -1,5 +1,5 @@
 # gulp-pixel2rem
-gulp plugin to transform pixel to rem automatically, compatible with both pc and mobile
+gulp plugin to transform pixel to rem automatically, compatible with both pc and mobile devices
 
 # usage
 first install package
@@ -20,7 +20,7 @@ gulp.task('default', function () {
 });
 ```
 
-finally it will auto generate the following code in your html file
+finally it will generate the following code in your html file automatically
 ```javascript
 <script>
     var customWidth = innerWidth;
