@@ -1,8 +1,8 @@
 {
-  "name": "gulp-px2rem",
+  "name": "gulp-pixel2rem",
   "description": "gulp plugin to enable usage of rem instead of pixel",
   "version": "0.0.1",
-  "homepage": "https://github.com/asphalt2018/gulp-px2rem",
+  "homepage": "https://github.com/asphalt2018/gulp-pixel2rem",
   "authors": [
     {
       "name": "asphalt2018",
@@ -14,6 +14,7 @@
     "@types/node": "^10.3.2",
     "bufferstreams": "^2.0.1",
     "gulp": "^3.9.1",
+    "gulp-pixel2rem": "^0.0.1",
     "plugin-error": "^1.0.1",
     "readable-stream": "^2.3.6"
   }
