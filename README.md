@@ -1,5 +1,5 @@
 # gulp-pixel2rem
-gulp plugin to enable usage of rem instead of pixel
+gulp plugin to transform pixel to rem automatically
 
 # usage
 first install package
