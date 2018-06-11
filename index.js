@@ -3,8 +3,12 @@ const BufferStreams = require('bufferstreams');
 const PluginError = require('plugin-error');
 module.exports = function (options) {
   let customWidth = 500;
+  let layoutWidth = 750;
   if (options && options.maxWidth) {
     customWidth = options.maxWidth
+  }
+  if (options && options.layoutWidth) {
+    layoutWidth = options.layoutWidth
   }
   return new Transform({
     objectMode: true,
@@ -18,11 +22,11 @@ module.exports = function (options) {
         '   if (innerWidth > ' + customWidth + ') {\n' +
         '     customWidth = ' + customWidth + '\n' +
         '   }\n' +
-        '   document.documentElement.style.fontSize = 100 * customWidth / 750 + \'px\';\n' +
+        '   document.documentElement.style.fontSize = 100 * customWidth / ' + layoutWidth + ' + \'px\';\n' +
         '   addEventListener(\'load\', function () {\n' +
         '     setTimeout(function () {\n' +
-        '       document.documentElement.style.fontSize = 100 * customWidth / 750 + \'px\';\n' +
-        '       window.unit = 100 * customWidth / 750;\n' +
+        '       document.documentElement.style.fontSize = 100 * customWidth / ' + layoutWidth + ' + \'px\';\n' +
+        '       window.unit = 100 * customWidth / ' + layoutWidth + ';\n' +
         '       var e = document.createEvent(\'Event\');\n' +
         '       e.initEvent(\'adjustReady\', true, true);\n' +
         '       window.dispatchEvent(e);\n' +
@@ -30,7 +34,7 @@ module.exports = function (options) {
         '   });\n' +
         '   addEventListener(\'orientationchange\', function () {\n' +
         '     setTimeout(function () {\n' +
-        '       document.documentElement.style.fontSize = 100 * customWidth / 750 + \'px\';\n' +
+        '       document.documentElement.style.fontSize = 100 * customWidth / ' + layoutWidth + ' + \'px\';\n' +
         '     }, 480)\n' +
         '   });\n' +
         '  </script>\n' +
@@ -42,7 +46,7 @@ module.exports = function (options) {
           buffers = new Buffer(buffer.toString().replace('</head>', replacer))
         } catch (e) {
           options = Object.assign({}, options, {fileName: file.path});
-          done(new PluginError('gulp-px2rem', e, options));
+          done(new PluginError('gulp-pixel2rem', e, options));
           return;
         }
         done(null, buffers)
