@@ -1,5 +1,5 @@
 # gulp-pixel2rem
-gulp plugin to transform pixel to rem automatically
+gulp plugin to transform pixel to rem automatically, compatible with both pc and mobile
 
 # usage
 first install package
@@ -15,7 +15,7 @@ const gulp = require('gulp');
 const px2rem = require('gulp-pixel2rem');
 gulp.task('default', function () {
   return gulp.src('./index.html')
-    .pipe(px2rem({maxScreenWidth: 480}))
+    .pipe(px2rem({maxWidth: 480}))
     .pipe(gulp.dest('dist'))
 });
 ```
@@ -44,3 +44,5 @@ finally it will auto generate the following code in your html file
     });
 </script>
 ```
+# options
+*maxWidth  the container's max width of you app
