@@ -1,7 +1,7 @@
 {
   "name": "gulp-pixel2rem",
   "description": "gulp plugin to enable usage of rem instead of pixel",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "homepage": "https://github.com/asphalt2018/gulp-pixel2rem",
   "authors": [
     {
