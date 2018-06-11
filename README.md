@@ -47,5 +47,5 @@ finally it will auto generate the following code in your html file
 # options
 * maxWidth    
 the container's max width of you app
-* layoutWidth
+* layoutWidth     
 better be an integral multiple of the layout width of your psd or sketch file, ofter, is't set to 750
