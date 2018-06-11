@@ -45,4 +45,5 @@ finally it will auto generate the following code in your html file
 </script>
 ```
 # options
-*maxWidth  the container's max width of you app
+* maxWidth    
+the container's max width of you app
